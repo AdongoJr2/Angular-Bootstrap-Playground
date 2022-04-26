@@ -3,8 +3,11 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { DurationPipe } from "./pipes";
 
-const declarationsForExport: never[] = [];
+const declarationsForExport = [
+  DurationPipe,
+];
 
 @NgModule({
   declarations: [
