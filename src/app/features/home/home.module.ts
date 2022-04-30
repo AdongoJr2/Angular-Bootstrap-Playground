@@ -4,12 +4,16 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HomePageComponent } from './pages';
 import { SharedModule } from '../../shared/shared.module';
+import {
+  HeroComponent
+} from './components';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    HomePageComponent
+    HomePageComponent,
+    HeroComponent
   ],
   imports: [
     SharedModule,

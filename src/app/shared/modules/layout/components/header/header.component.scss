@@ -12,6 +12,10 @@
 
     li {
       min-width: 75px;
+
+      span {
+        cursor: pointer;
+      }
     }
 
     >.active {

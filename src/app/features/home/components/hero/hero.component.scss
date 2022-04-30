@@ -1,0 +1,50 @@
+.hero {
+  background-color: rgb(242 247 246);
+  border-radius: 12px;
+  position: relative;
+
+  .our-blog {
+    color: rgb(182 220 143);
+  }
+
+  .dot-1,
+  .dot-2,
+  .dot-3,
+  .dot-4 {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .dot-1 {
+    top: 16%;
+    left: 8%;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(253 154 206);
+  }
+
+  .dot-2 {
+    top: 12%;
+    right: 8%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(86 102 253);
+  }
+
+  .dot-3 {
+    bottom: 12%;
+    left: 10%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(166 211 114);
+  }
+
+  .dot-4 {
+    bottom: 12%;
+    right: 10%;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(255 191 22);
+  }
+
+}
