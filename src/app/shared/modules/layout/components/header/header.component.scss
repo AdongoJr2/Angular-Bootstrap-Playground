@@ -1,0 +1,29 @@
+:host {
+
+  .logo {
+    .last-part {
+      color: red;
+    }
+  }
+
+  .middle-links,
+  .end-links {
+    list-style: none;
+
+    li {
+      min-width: 75px;
+    }
+
+    >.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      >span {
+        width: fit-content;
+        border-bottom: 2px solid black;
+      }
+    }
+
+  }
+}
