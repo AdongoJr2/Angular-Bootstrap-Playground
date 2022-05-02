@@ -5,7 +5,8 @@ import { HomeComponent } from './home.component';
 import { HomePageComponent } from './pages';
 import { SharedModule } from '../../shared/shared.module';
 import {
-  HeroComponent
+  HeroComponent,
+  MidSectionComponent,
 } from './components';
 
 
@@ -13,7 +14,8 @@ import {
   declarations: [
     HomeComponent,
     HomePageComponent,
-    HeroComponent
+    HeroComponent,
+    MidSectionComponent
   ],
   imports: [
     SharedModule,
