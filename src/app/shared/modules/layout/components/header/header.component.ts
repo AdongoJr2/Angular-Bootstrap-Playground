@@ -12,6 +12,19 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const navBar: HTMLElement | null = document.querySelector(".navbar");
+
+    console.log(navBar);
+
+    if (navBar) {
+      window.onscroll = () => {
+        if (window.scrollY > 16) {
+          navBar.classList.add('navbar-active');
+        } else {
+          navBar.classList.remove('navbar-active');
+        }
+      };
+    }
   }
 
 }

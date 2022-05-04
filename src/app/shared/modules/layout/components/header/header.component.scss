@@ -1,4 +1,15 @@
 :host {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    transition: background-color .5s linear;
+
+    &-active {
+      background-color: rgba(192, 192, 192, 0.97);
+    }
+  }
 
   .logo {
     .last-part {
