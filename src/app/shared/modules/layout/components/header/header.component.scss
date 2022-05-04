@@ -6,8 +6,7 @@
     }
   }
 
-  .middle-links,
-  .end-links {
+  .middle-links {
     list-style: none;
 
     li {
@@ -29,5 +28,15 @@
       }
     }
 
+  }
+
+  .end-links {
+    list-style: none;
+
+    li {
+      span {
+        cursor: pointer;
+      }
+    }
   }
 }

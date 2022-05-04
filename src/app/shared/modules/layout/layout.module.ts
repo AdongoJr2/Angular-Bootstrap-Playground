@@ -6,6 +6,7 @@ import { LayoutComponent } from './layout.component';
 import {
   HeaderComponent
 } from './components';
+import { SharedModule } from '@app/shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import {
     HeaderComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     LayoutRoutingModule
   ]
 })
