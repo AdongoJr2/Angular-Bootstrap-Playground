@@ -6,7 +6,10 @@ import {
   faHandHoldingDollar,
   faBlog,
   faBookOpenReader,
-  faAddressBook
+  faAddressBook,
+  faMinus,
+  faAngleDown,
+  faAngleUp,
 } from '@fortawesome/free-solid-svg-icons';
 // import {
 //   faAddressBook
@@ -24,6 +27,11 @@ export class SidenavComponent implements OnInit {
   readonly faBlog = faBlog;
   readonly faBookOpenReader = faBookOpenReader;
   readonly faAddressBook = faAddressBook;
+  readonly faMinus = faMinus;
+  readonly faAngleDown = faAngleDown;
+  readonly faAngleUp = faAngleUp;
+
+  isCollapsed = true;
 
   constructor(
     private activeOffcanvas: NgbActiveOffcanvas

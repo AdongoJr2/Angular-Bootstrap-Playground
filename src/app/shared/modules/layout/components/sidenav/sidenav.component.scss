@@ -1,3 +1,7 @@
+$color-active: rgba(76, 106, 205, 1);
+$bg-color-active: rgba(235, 240, 254, 1);
+$border-radius: 8px;
+
 :host {
   padding: 0 1rem;
 
@@ -7,12 +11,13 @@
     }
   }
 
-  .links {
+  .links,
+  .sub-links {
     list-style: none;
 
     li {
       min-width: 75px;
-      border-radius: 8px;
+      border-radius: $border-radius;
 
       span {
         cursor: pointer;
@@ -20,9 +25,19 @@
     }
 
     >.active {
-      background-color: rgba(235, 240, 254, 1);
-      // color: rgba(54, 96, 237, 1);
-      color: rgba(76, 106, 205, 1);
+      color: $color-active;
+      background-color: $bg-color-active;
     }
   }
+
+  .links {
+    >.active-parent {
+      >div.sub-nav-trigger {
+        border-radius: $border-radius;
+        color: $color-active;
+        background-color: $bg-color-active;
+      }
+    }
+  }
+
 }

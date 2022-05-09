@@ -6,14 +6,37 @@
   <button type="button" class="btn-close" aria-label="Close" (click)="close('Close click')"></button>
 </div>
 
-<div class="offcanvas-body pt-2 ps-2 links">
+<ul class="offcanvas-body pt-2 ps-2 links">
   <li class="mb-1 px-3 py-2 text-start" (click)="close('Nav item click')">
     <fa-icon [icon]="faHome"></fa-icon>
     <span class="ms-2">Home</span>
   </li>
-  <li class="my-1 px-3 py-2 text-start" (click)="close('Nav item click')">
-    <fa-icon [icon]="faPeopleGroup"></fa-icon>
-    <span class="ms-2">About Us</span>
+  <li class="my-1 text-start active-parent">
+    <div (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" class="px-3 py-2 sub-nav-trigger">
+      <div class="d-flex justify-content-between">
+        <span>
+          <fa-icon [icon]="faPeopleGroup"></fa-icon>
+          <span class="ms-2">About Us</span>
+        </span>
+        <fa-icon *ngIf="isCollapsed" [icon]="faAngleDown"></fa-icon>
+        <fa-icon *ngIf="!isCollapsed" [icon]="faAngleUp"></fa-icon>
+      </div>
+    </div>
+    <!-- sub nav -->
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="sub-nav">
+      <div class="card-body pb-0 pe-0">
+        <ul class="ps-2 sub-links">
+          <li class="mb-1 px-2 py-1 active">
+            <fa-icon [icon]="faMinus"></fa-icon>
+            Our History
+          </li>
+          <li class="mb-1 px-2 py-1">
+            <fa-icon [icon]="faMinus"></fa-icon>
+            Our Team
+          </li>
+        </ul>
+      </div>
+    </div>
   </li>
   <li class="my-1 px-3 py-2 text-start" (click)="close('Nav item click')">
     <fa-icon [icon]="faHandHoldingDollar"></fa-icon>
@@ -27,4 +50,4 @@
     <fa-icon [icon]="faAddressBook"></fa-icon>
     <span class="ms-2">Contact</span>
   </li>
-</div>
+</ul>
