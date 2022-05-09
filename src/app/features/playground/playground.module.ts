@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 import { PlaygroundRoutingModule } from './playground-routing.module';
 import { PlaygroundComponent } from './playground.component';
 import { SharedModule } from '@app/shared';
+import {
+  FormRatingComponent
+} from './components';
 
 
 @NgModule({
   declarations: [
-    PlaygroundComponent
+    PlaygroundComponent,
+    FormRatingComponent
   ],
   imports: [
     SharedModule,
