@@ -41,38 +41,8 @@
       </button>
     </li>
     <!-- side nav toggle -->
-    <li class="d-lg-none text-end ps-3" style="padding-top: 6px; min-width: auto;" (click)="open(content)">
+    <li class="d-lg-none text-end ps-3" style="padding-top: 6px; min-width: auto;" (click)="open()">
       <fa-icon [icon]="faBars" size="2x"></fa-icon>
     </li>
   </ul>
 </nav>
-
-
-<!-- TODO: move to its own component (sidebar component) -->
-<ng-template #content let-offcanvas>
-  <div class="offcanvas-header">
-    <h4 class="offcanvas-title fs-3 fw-bold" id="offcanvas-basic-title">
-      <span class="first-part">GRO.</span>
-      <span class="last-part">PRO</span>
-    </h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
-  </div>
-
-  <div class="offcanvas-body">
-    <li class="text-start">
-      <span>Home</span>
-    </li>
-    <li class="text-start">
-      <span>About Us</span>
-    </li>
-    <li class="text-start">
-      <span>Pricing</span>
-    </li>
-    <li class="text-start active">
-      <span>Blog</span>
-    </li>
-    <li class="text-start">
-      <span>Contact</span>
-    </li>
-  </div>
-</ng-template>

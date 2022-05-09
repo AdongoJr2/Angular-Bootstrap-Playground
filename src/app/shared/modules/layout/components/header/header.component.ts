@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { NgbOffcanvas, OffcanvasDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
+import { SidenavComponent } from '../sidenav/sidenav.component';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +10,6 @@ import { NgbOffcanvas, OffcanvasDismissReasons } from '@ng-bootstrap/ng-bootstra
 })
 export class HeaderComponent implements OnInit {
   readonly faBars = faBars;
-
-  closeResult = '';
 
   constructor(
     private offcanvasService: NgbOffcanvas
@@ -32,22 +31,8 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  open(content: any) {
-    this.offcanvasService.open(content, { ariaLabelledBy: 'offcanvas-basic-title' }).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason: any) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === OffcanvasDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === OffcanvasDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on the backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
+  open() {
+    this.offcanvasService.open(SidenavComponent);
   }
 
 }
