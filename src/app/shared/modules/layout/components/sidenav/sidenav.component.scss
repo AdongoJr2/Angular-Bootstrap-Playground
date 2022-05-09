@@ -1,0 +1,28 @@
+:host {
+  padding: 0 1rem;
+
+  .logo {
+    .last-part {
+      color: red;
+    }
+  }
+
+  .links {
+    list-style: none;
+
+    li {
+      min-width: 75px;
+      border-radius: 8px;
+
+      span {
+        cursor: pointer;
+      }
+    }
+
+    >.active {
+      background-color: rgba(235, 240, 254, 1);
+      // color: rgba(54, 96, 237, 1);
+      color: rgba(76, 106, 205, 1);
+    }
+  }
+}
