@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { PlaygroundRoutingModule } from './playground-routing.module';
 import { PlaygroundComponent } from './playground.component';
+import { SharedModule } from '@app/shared';
 
 
 @NgModule({
@@ -10,7 +10,7 @@ import { PlaygroundComponent } from './playground.component';
     PlaygroundComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     PlaygroundRoutingModule
   ]
 })

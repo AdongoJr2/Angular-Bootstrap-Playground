@@ -1,3 +1,19 @@
 <div class="p-3">
-  <p>playground works!</p>
+  <p>Form Rating</p>
+
+  <div class="mb-3">
+    <ngb-rating [formControl]="ctrl"></ngb-rating>
+    <div class="form-text small">
+      <div *ngIf="ctrl.valid" class="text-success">Thanks for your {{ctrl.value}} star rating</div>
+      <div *ngIf="ctrl.invalid" class="text-danger">Please rate us</div>
+    </div>
+  </div>
+
+  <!-- <hr> -->
+  <!-- <button class="btn btn-sm btn-outline-{{ ctrl.disabled ? 'danger' : 'success'}} me-2" (click)="toggle()">
+    {{ ctrl.disabled ? "control disabled" : " control enabled" }}
+  </button> -->
+  <button class="btn btn-sm btn-outline-primary me-2" (click)="ctrl.setValue(null)">
+    Clear
+  </button>
 </div>
