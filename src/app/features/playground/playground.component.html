@@ -3,7 +3,7 @@
 
   <form [formGroup]="issueCloseForm" (ngSubmit)="onIssueCloseSubmit()">
     <div class="mb-3">
-      <ngb-rating formControlName="issueCloseRating"></ngb-rating>
+      <ngb-rating formControlName="issueCloseRating" [max]="maximumRatingValue"></ngb-rating>
 
       <div *ngIf="fieldHasErrors(issueCloseRating!)" class="help-block">
         <ul role="alert">
@@ -11,11 +11,8 @@
         </ul>
       </div>
 
-      <div *ngIf="issueCloseRating?.value" class="">
-        <small>Your Rating: {{ issueCloseRating?.value}} </small>
-      </div>
-      <div *ngIf="!issueCloseRating?.value" class="">
-        <small>Your Rating: {{ 'N/A' }} </small>
+      <div class="">
+        <small>Your Rating: {{ ratingFormatted ?? 'N/A' }} </small>
       </div>
 
       <div class="mt-3">

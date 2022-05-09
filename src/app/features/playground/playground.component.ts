@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-playground',
@@ -7,6 +7,8 @@ import { AbstractControl, FormBuilder, FormControl, Validators } from '@angular/
   styleUrls: ['./playground.component.scss']
 })
 export class PlaygroundComponent implements OnInit {
+
+  maximumRatingValue = 5;
 
   issueCloseForm = this.fb.group({
     issueCloseComment: [null],
@@ -20,6 +22,16 @@ export class PlaygroundComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  public get ratingFormatted() : string | null {
+    if (this.issueCloseForm.value["issueCloseRating"]) {
+      return `${this.issueCloseForm.value.issueCloseRating}/${this.maximumRatingValue}`
+    }
+
+    return null;
+  }
+
 
   onIssueCloseSubmit(): void {
     const form = this.issueCloseForm;
