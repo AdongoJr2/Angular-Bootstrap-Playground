@@ -6,6 +6,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./shared/modules/layout/layout.module').then(m => m.LayoutModule),
   },
+  { path: 'playground', loadChildren: () => import('./features/playground/playground.module').then(m => m.PlaygroundModule) },
 ];
 
 @NgModule({
