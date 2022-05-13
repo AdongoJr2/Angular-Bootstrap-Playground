@@ -31,4 +31,19 @@
 
   <!-- input -->
   <input type="date">
+
+  <hr>
+
+  <br *ngFor="let i of [].constructor(20)">
+
+  <!-- animate.css -->
+  <div class="elem">
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <!-- <h1 class="animate__animated animate__fadeIn">An animated element</h1> -->
+    <h1 class="animate__animated" [class.animate__bounce]="isInViewport()">An animated element</h1>
+  </div>
+
+  <hr>
+
+  <!--  -->
 </div>
