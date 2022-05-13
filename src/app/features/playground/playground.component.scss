@@ -1,0 +1,11 @@
+details {
+  transition: all 1s;
+
+  &[open] {
+    color: green;
+  }
+}
+
+mark {
+
+}

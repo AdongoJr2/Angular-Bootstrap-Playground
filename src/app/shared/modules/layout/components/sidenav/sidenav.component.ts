@@ -10,7 +10,9 @@ import {
   faMinus,
   faAngleDown,
   faAngleUp,
+  faCode
 } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 // import {
 //   faAddressBook
 // } from '@fortawesome/free-regular-svg-icons';
@@ -30,10 +32,12 @@ export class SidenavComponent implements OnInit {
   readonly faMinus = faMinus;
   readonly faAngleDown = faAngleDown;
   readonly faAngleUp = faAngleUp;
+  readonly faCode = faCode;
 
   isCollapsed = true;
 
   constructor(
+    private router: Router,
     private activeOffcanvas: NgbActiveOffcanvas
   ) { }
 
@@ -42,6 +46,11 @@ export class SidenavComponent implements OnInit {
 
   close(reason: string): void {
     this.activeOffcanvas.close(reason);
+  }
+
+  navigate(path: string, closeReason?: string): void {
+    this.close(closeReason ?? '');
+    this.router.navigate([path]);
   }
 
 }
